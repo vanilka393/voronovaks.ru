@@ -1,0 +1,22 @@
+« Использовать строгий » ;
+
+Var  EOL  =  require ( ' os ' ). EOL ;
+
+Модуль . Export  =  function ( entity , naming ) {
+    Возвращение [
+        " Module.exports = { " ,
+        "     Block: 'page', " ,
+        "     Title:" Страница "  +  объект . Block  +  " ', " ,
+        "     Favicon: '/favicon.ico', " ,
+        "     Head: [ " ,
+        "         {Elem: 'meta', attrs: {name: 'description', content: ''}}, " ,
+        "         {Elem: 'meta', attrs: {name: 'viewport', content: 'width = device-width, initial-scale = 1'}}, " ,
+        "         {Elem: 'css', url: ' "  +  entity . Block  +  " .min.css '} " ,
+        "     ], " ,
+        "     Scripts: [{elem: 'js', url: ' "  +  entity . Block  +  " .min.js '}], " ,
+        «     Моды: {тема:« острова »}, " ,
+        "     Content: [] " ,
+        " }; " ,
+        " "
+    ]. Join ( EOL );
+};
